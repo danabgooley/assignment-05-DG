@@ -1,3 +1,10 @@
+Dana's Notes
+
+-Thanks for all your help!
+-Figured out the lowercase thing, couldn't get the reset to work. 
+
+
+
 #FEWD Week #5: More JavaScript
 
 
