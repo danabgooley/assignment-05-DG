@@ -1,17 +1,14 @@
 $(document).ready(function(){
 
-	// recognize when user submits 
-	$("#submit-btn").click(changeCity);
-	//run function changeCity
 	function changeCity() {
-		// use event.preventDefault(); to prevent the page from reloading
-		event.preventDefault();
-		// store user input
-		var city = $("#city-type").val();
-		// change input to all lowercase letters 
-		city = $("#city-type").val().toLowerCase();
-		// display different background based on user input
-		if (city == "new york"|| city == "nyc" || city == "new york city") {
+// // create an array
+var cities = ["NYC", "SF", "LA", "ATX", "SYD"];
+// //use the forEach function to add them to the select menu
+// On selection, change background
+$("select").change(function() {
+var city = $("#city-type").val();
+
+if (city == "new york"|| city == "nyc" || city == "new york city") {
 			 $("body").attr("class","nyc");
 		} else if (city == "san francisco"|| city == "sf" || city == "bay area") {
 			 $("body").attr("class","sf");
@@ -22,8 +19,15 @@ $(document).ready(function(){
 		} else if (city == "sydney"|| city == "syd") {
 			 $("body").attr("class","sydney");
 		}
-	}
+});
+
+	cities.forEach(function(element) {
+		$("select").append("<option>" + element + "</option>");
+	})
+
+
 
 });
+ 
 
 
